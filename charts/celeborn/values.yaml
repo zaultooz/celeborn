@@ -227,6 +227,14 @@ worker:
     # key1: value1
     # key2: value2
 
+  # -- Configuration for creating persisted volumes together with a storageclass for them to use for the volumeClaimTemplate
+  storage:
+    enabled: false
+    capacity: 10Gi
+    class: celeborn-storage
+    # Directory the disk are mounted on, assumes all drives are mounted in /data
+    drives: []
+
   # -- Environment variables for Celeborn worker containers.
   env:
   - name: CELEBORN_WORKER_MEMORY
