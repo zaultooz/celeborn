@@ -15,7 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */ -}}
 
-{{- if .Values.storage.enabled }}
+{{- if .Values.worker.storage.enabled }}
 {{- range $i, $replica := until (.Values.worker.replicas | int) }}
 {{- range $drive := $.Values.worker.storage.drives }}
 apiVersion: v1
